@@ -1,0 +1,28 @@
+@import '../../sassStyles/variables';
+
+.header {
+  background-color: $color-brand;
+  grid-area: header;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header__user {
+    display: flex;
+    align-items: center;
+
+    .header__user-img {
+    }
+    .header__user-name {
+      color: $color-white;
+      font-weight: 700;
+      margin-left: 16px;
+    }
+  }
+}
+
+.logo {
+  .logo__img {
+  }
+}

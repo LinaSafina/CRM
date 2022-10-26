@@ -1,0 +1,16 @@
+@import './variables.scss';
+
+h2 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+  color: $color-title;
+}
+
+p {
+  color: $color-mainText;
+}
+
+input::placeholder {
+  color: $color-placeholder;
+}
