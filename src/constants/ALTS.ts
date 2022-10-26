@@ -1,4 +1,4 @@
 export const ALTS = {
-  user: 'user icon',
-  firmLogo: 'firm logo',
+  user: 'иконка пользователя',
+  firmLogo: 'логотип компании',
 };

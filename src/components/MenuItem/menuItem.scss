@@ -1,0 +1,19 @@
+.nav__list-item {
+  margin-bottom: 40px;
+  .nav__link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .nav__img {
+      height: 32px;
+      width: 32px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .nav__item-title {
+      margin-left: 16px;
+    }
+  }
+}

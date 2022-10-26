@@ -7,15 +7,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
 
   .header__user {
     display: flex;
     align-items: center;
 
-    .header__user-img {
-    }
     .header__user-name {
-      color: $color-white;
+      color: $color-light;
       font-weight: 700;
       margin-left: 16px;
     }
