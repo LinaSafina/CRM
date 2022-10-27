@@ -6,6 +6,7 @@ import { Content } from './components/Content/Content';
 import { Navigate, Route, Routes } from 'react-router';
 import { News } from './components/News/News';
 import { Search } from './components/Search/Search';
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 
 function App() {
   return (
@@ -13,11 +14,16 @@ function App() {
       <Header />
       <SideMenu></SideMenu>
       <Content>
-        <Routes>
-          <Route path='/' element={<News />}></Route>
-          <Route path='/address' element={<Search />}></Route>
-          <Route path='*' element={<Navigate to='/' replace={true} />}></Route>
-        </Routes>
+        <ErrorBoundary>
+          <Routes>
+            <Route path='/' element={<News />}></Route>
+            <Route path='/address' element={<Search />}></Route>
+            <Route
+              path='*'
+              element={<Navigate to='/' replace={true} />}
+            ></Route>
+          </Routes>
+        </ErrorBoundary>
       </Content>
     </div>
   );

@@ -97,3 +97,13 @@ h2 {
   color: $color-link;
   text-decoration: underline;
 }
+
+.info {
+  margin: 5rem auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-dark;
+  font-size: 3rem;
+}
