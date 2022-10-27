@@ -3,14 +3,14 @@ import logo from './logo.svg';
 import './App.scss';
 import { Header } from './components/Header/Header';
 import { SideMenu } from './components/SideMenu/SideMenu';
-import { ContentContainer } from './components/ContentContainer/ContentContainer';
+import { Content } from './components/Content/Content';
 
 function App() {
   return (
     <div className='app'>
       <Header />
       <SideMenu></SideMenu>
-      <ContentContainer></ContentContainer>
+      <Content></Content>
     </div>
   );
 }

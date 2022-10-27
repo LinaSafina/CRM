@@ -1,10 +1,10 @@
 @import './variables.scss';
 
-h2 {
+h2,
+.big-text {
   font-weight: 700;
   font-size: 26px;
   line-height: 32px;
-  color: $color-title;
 }
 
 p {
@@ -12,5 +12,17 @@ p {
 }
 
 input::placeholder {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
   color: $color-placeholder;
+}
+
+input {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: $color-dark;
 }

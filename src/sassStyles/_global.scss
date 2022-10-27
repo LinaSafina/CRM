@@ -33,3 +33,53 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+button {
+  cursor: pointer;
+}
+
+h2 {
+  margin: 0;
+}
+
+.title {
+  margin-bottom: 16px;
+  color: $color-dark;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .form__input {
+    margin-right: 24px;
+    width: calc(100% - 217px - 24px);
+  }
+}
+
+.input {
+  padding: 23px 24px;
+  border: 3px solid $color-brand;
+  border-radius: 10px;
+}
+
+.button {
+  background: $color-brand;
+  border: none;
+  border-radius: 10px;
+  padding: 19px 40px;
+  color: $color-light;
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-left: 16px;
+  }
+}
+
+.icon--filter-white {
+  filter: invert(100%) sepia(0%) saturate(7495%) hue-rotate(330deg)
+    brightness(103%) contrast(101%);
+}
