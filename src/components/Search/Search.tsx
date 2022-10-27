@@ -5,7 +5,6 @@ import { ContentTop } from '../ContentTop/ContentTop';
 import { ChangeEvent, FormEvent, ReactElement, useState } from 'react';
 import getAddresses from '../../helpers/getAddresses';
 import { RequestStateType } from './types';
-import modifyAddress from '../../helpers/modifyAddress';
 
 export const Search = () => {
   const [enteredAddress, setEnteredAddress] = useState('');
@@ -26,11 +25,11 @@ export const Search = () => {
   const submitAddressFormHandler = (event: FormEvent) => {
     event.preventDefault();
 
-    setRequestState({ isLoading: true, error: null, data: null });
-
     if (enteredAddress.length < 3) {
       return;
     }
+
+    setRequestState({ isLoading: true, error: null, data: null });
 
     getAddresses(enteredAddress)
       .then((response) => response.json())
@@ -48,6 +47,9 @@ export const Search = () => {
           data: null,
         });
         console.log('error', error);
+      })
+      .finally(() => {
+        setEnteredAddress('');
       });
   };
 
@@ -60,6 +62,8 @@ export const Search = () => {
       </li>
     ));
   }
+
+  const isAddressesListEmpty = requestState?.data?.suggestions.length === 0;
 
   return (
     <>
@@ -87,7 +91,10 @@ export const Search = () => {
         </form>
       </section>
       {requestState.isLoading && <p>Загружаю...</p>}
-      {!requestState.isLoading && requestState.data && (
+      {requestState.data && isAddressesListEmpty && (
+        <p>По Вашему запросу ничего не найдено</p>
+      )}
+      {requestState.data && !isAddressesListEmpty && (
         <section className='main__address address'>
           <h2 className='address__title title'>Адреса</h2>
           <ul className='address__list'>{list}</ul>
