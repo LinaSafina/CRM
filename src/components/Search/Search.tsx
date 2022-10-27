@@ -5,7 +5,6 @@ import { ContentTop } from '../ContentTop/ContentTop';
 import { ChangeEvent, FormEvent, ReactElement, useState } from 'react';
 import getAddresses from '../../helpers/getAddresses';
 import { RequestStateType } from './types';
-import modifyAddress from '../../helpers/modifyAddress';
 
 export const Search = () => {
   const [enteredAddress, setEnteredAddress] = useState('');

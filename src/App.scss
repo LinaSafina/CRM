@@ -1,3 +1,5 @@
+@import './sassStyles/mixins';
+
 .app {
   display: grid;
   grid-template-areas:
@@ -8,6 +10,12 @@
   height: 100vh;
   max-width: 1440px;
   margin: 0 auto;
+
+  @include smMaxBreakPoint() {
+    & {
+      grid-template-columns: 0 1fr;
+    }
+  }
 }
 
 .App-logo {
