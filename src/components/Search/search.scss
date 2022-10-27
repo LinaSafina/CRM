@@ -14,9 +14,11 @@
   box-shadow: 0px 2px 8px rgba(2, 0, 97, 0.25);
   border-radius: 10px;
   padding: 24px;
+
   .address__list-item {
     padding: 16px 0;
     border-top: 1px solid $color-border;
+
     &:nth-last-child(1) {
       padding-bottom: 0;
     }

@@ -1,6 +1,8 @@
+import { TOKEN } from '../constants/TOKEN';
+
 const url =
   'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address';
-const token = 'bdd687090e5aec5261ac6966176fd99a49377dce';
+const token = TOKEN;
 
 function getAddresses(query: string) {
   const options: { [key: string]: string | { [key2: string]: string } } = {

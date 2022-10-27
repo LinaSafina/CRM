@@ -1,6 +1,7 @@
 import { MenuItemProps } from './types';
 import './menuItem.scss';
 import getImageByKey from '../../helpers/getImageByKey';
+import { Link } from 'react-router-dom';
 
 export const MenuItem: React.FC<{
   item: MenuItemProps;
@@ -9,14 +10,14 @@ export const MenuItem: React.FC<{
   return (
     <li className='nav__list-item'>
       {!item.subfields && (
-        <a className='nav__link' href={item.link}>
+        <Link className='nav__link' to={item.link || '#'}>
           <img
             className='nav__img'
             alt={`${item.title} иконка`}
             src={getImageByKey(item.img)}
           />
           <span className='nav__item-title'>{item.title}</span>
-        </a>
+        </Link>
       )}
       {item.subfields && onClick && (
         <button className='nav__button nav__link' onClick={onClick}>

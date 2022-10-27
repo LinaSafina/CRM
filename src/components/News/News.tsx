@@ -1,5 +1,4 @@
 import { ContentTop } from '../ContentTop/ContentTop';
-import './news.scss';
 
 export const News = () => {
   return (

@@ -19,7 +19,7 @@ function App() {
   return (
     <div className='app'>
       <Header />
-      <SideMenu></SideMenu>
+      <SideMenu />
       <Content>
         <ErrorBoundary>
           <Suspense fallback={<Loading />}>
