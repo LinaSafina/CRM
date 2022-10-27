@@ -51,18 +51,6 @@ h2 {
   color: $color-dark;
 }
 
-.form {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  .form__input {
-    margin-right: 24px;
-    width: calc(100% - 217px - 24px);
-  }
-}
-
 .input {
   padding: 23px 24px;
   border: 3px solid $color-brand;

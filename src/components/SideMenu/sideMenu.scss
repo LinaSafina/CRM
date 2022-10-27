@@ -1,4 +1,5 @@
 @import '../../sassStyles/variables';
+@import '../../sassStyles/mixins';
 
 .nav {
   grid-area: nav;
@@ -24,5 +25,11 @@
 
   .nav__list--shiftted {
     margin-left: 16px;
+  }
+
+  @include smMaxBreakPoint() {
+    & {
+      transform: translateX(-300px);
+    }
   }
 }
