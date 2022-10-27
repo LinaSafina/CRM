@@ -1,7 +1,7 @@
 @import './variables';
 
-mixin mdMinBreakPoint {
-  @media (min-width: #{$screen-md}) {
+@mixin smMaxBreakPoint {
+  @media (max-width: #{$screen-sm}) {
     @content;
   }
 }
