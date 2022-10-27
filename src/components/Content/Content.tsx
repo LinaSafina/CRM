@@ -1,12 +1,6 @@
-import { News } from '../News/News';
-import { Search } from '../Search/Search';
 import './content.scss';
+import { ContentProps } from './types';
 
-export const Content: React.FC = () => {
-  return (
-    <main className='main'>
-      {/* <Search /> */}
-      <News />
-    </main>
-  );
+export const Content: React.FC<ContentProps> = ({ children }) => {
+  return <main className='main'>{children}</main>;
 };

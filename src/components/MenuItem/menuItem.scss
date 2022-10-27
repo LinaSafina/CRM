@@ -16,4 +16,14 @@
       margin-left: 16px;
     }
   }
+
+  .nav__button {
+    border: none;
+    background-color: transparent;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    padding: 0;
+  }
 }

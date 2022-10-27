@@ -6,8 +6,8 @@ export const ContentTop: React.FC<{ title: string; subtitle: string }> = ({
 }) => {
   return (
     <>
-      <h2 className=' title'>{title}</h2>
-      <p>{subtitle}</p>
+      <h2 className='title'>{title}</h2>
+      <p className='subtitle'>{subtitle}</p>
     </>
   );
 };

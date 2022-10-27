@@ -6,7 +6,7 @@ import './header.scss';
 export const Header: React.FC = () => {
   return (
     <header className='header'>
-      <a className='logo'>
+      <a className='logo' href='/'>
         <img className='logo__img' src={firmLogo} alt={ALTS.firmLogo} />
       </a>
       <div className='header__user'>
